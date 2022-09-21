@@ -10,7 +10,7 @@ server.post('/usuario/login', async (req, resp) => {
         const resposta = await login(email, senha);
         
         if (!resposta) {
-            throw new Error('Opps ocorreu um erro inesperado ao fazer o login. Tente novamente');
+            throw new Error('Opps ocorreu um erro inesperado. Tente novamente');
         }
 
         resp.send(resposta)
